@@ -208,19 +208,21 @@ export default function Home() {
                 {t("hero.subtagline")} with 15+ years of international expertise by Dr. Bijay Regmi.
               </p>
 
-              <div className="flex flex-col sm:flex-row gap-4">
+              <div className="flex flex-row gap-4">
                 <Link
                   href="/appointment"
-                  className="hero-cta group inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full bg-[var(--color-primary)] text-white font-semibold text-lg transition-all hover:shadow-[0_8px_30px_rgba(255,5,95,0.3)] hover:scale-[1.02] active:scale-[0.98]"
+                  className="hero-cta group inline-flex flex-1 min-w-0 items-center justify-center gap-2 px-6 py-4 rounded-full bg-[var(--color-primary)] text-white font-semibold text-base sm:text-lg transition-all hover:shadow-[0_8px_30px_rgba(255,5,95,0.3)] hover:scale-[1.02] active:scale-[0.98]"
                 >
-                  {t("btn.book")}
+                  <span className="sm:hidden">Appointment</span>
+                  <span className="hidden sm:inline">{t("btn.book")}</span>
                   <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
                 </Link>
                 <Link
                   href="/services"
-                  className="hero-cta inline-flex items-center justify-center px-8 py-4 rounded-full border border-[var(--color-chocolate)]/25 text-[var(--color-chocolate)] font-semibold text-lg hover:bg-[var(--color-chocolate)]/5 transition-colors"
+                  className="hero-cta inline-flex flex-1 min-w-0 items-center justify-center px-6 py-4 rounded-full border border-[var(--color-chocolate)]/25 text-[var(--color-chocolate)] font-semibold text-base sm:text-lg hover:bg-[var(--color-chocolate)]/5 transition-colors"
                 >
-                  Explore Services
+                  <span className="sm:hidden">Services</span>
+                  <span className="hidden sm:inline">Explore Services</span>
                 </Link>
               </div>
             </div>
@@ -231,12 +233,12 @@ export default function Home() {
             initial={{ opacity: 0, scale: 1.04 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.9, delay: 0.15 }}
-            className="relative min-h-[45vh] lg:min-h-screen"
+            className="relative min-h-[54vh] lg:min-h-screen"
           >
             <img
               src="/ChatGPT Image May 28, 2026, 03_37_57 PM.png"
               alt="Close-up of eye for vision care"
-              className="absolute inset-0 h-full w-full object-cover"
+              className="absolute inset-0 h-full w-full object-cover object-top lg:object-center"
             />
             <div className="absolute inset-0 bg-gradient-to-l from-transparent via-transparent to-[#FDF8F3]/30 lg:to-[#FDF8F3]/12" />
           </motion.div>
