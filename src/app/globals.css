@@ -1,0 +1,129 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #FF055F;
+  --color-secondary: #01FFFF;
+  
+  --font-sans: "Inter", var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+  
+  /* Warm Cream / Chocolate Palette */
+  --color-cream: #FDF8F3;
+  --color-cream-dark: #F5EDE4;
+  --color-cream-deeper: #EDE3D7;
+  --color-chocolate: #2C1810;
+  --color-chocolate-light: #5C3D2E;
+  --color-chocolate-muted: #8B6F5E;
+  --color-warm-border: #E8DDD1;
+  --color-warm-accent: #D4A574;
+}
+
+:root {
+  color-scheme: light;
+  --color-primary: #FF055F;
+  --color-secondary: #00E5E5; /* Slightly adjusted cyan for better visibility */
+  
+  --font-sans: "Inter", var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+  
+  /* Warm Cream / Chocolate Palette */
+  --color-cream: #FDF8F3;
+  --color-cream-dark: #F5EDE4;
+  --color-cream-deeper: #EDE3D7;
+  --color-chocolate: #2C1810;
+  --color-chocolate-light: #5C3D2E;
+  --color-chocolate-muted: #8B6F5E;
+  --color-warm-border: #E8DDD1;
+  --color-warm-accent: #D4A574;
+}
+
+html, body {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--color-cream);
+  color: var(--color-chocolate);
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: var(--font-sans);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-cream-dark);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-chocolate-muted);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-chocolate-light);
+}
+
+/* Popup scrollbar (premium look) */
+.scrollbar-popup {
+  scrollbar-width: thin; /* Firefox */
+  scrollbar-color: rgba(44, 24, 16, 0.35) rgba(245, 237, 228, 0.6);
+}
+
+.scrollbar-popup::-webkit-scrollbar {
+  width: 10px;
+}
+
+.scrollbar-popup::-webkit-scrollbar-track {
+  background: rgba(245, 237, 228, 0.55);
+  border-radius: 999px;
+  margin: 12px 0;
+}
+
+.scrollbar-popup::-webkit-scrollbar-thumb {
+  background: rgba(44, 24, 16, 0.28);
+  border-radius: 999px;
+  border: 3px solid rgba(245, 237, 228, 0.55);
+}
+
+.scrollbar-popup::-webkit-scrollbar-thumb:hover {
+  background: rgba(44, 24, 16, 0.42);
+}
+
+::selection {
+  background-color: var(--color-primary);
+  color: #fff;
+}
+
+/* Soft warm glass panel */
+.glass-warm {
+  background: rgba(253, 248, 243, 0.7);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--color-warm-border);
+}
+
+/* Section divider with warm gradient */
+.warm-divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--color-warm-border), transparent);
+}
+
+/* Organic blob shape for decorative backgrounds */
+.organic-blob {
+  border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+}
+
+/* Smooth image reveal */
+.img-reveal {
+  clip-path: inset(0 100% 0 0);
+  transition: clip-path 0.8s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.img-reveal.revealed {
+  clip-path: inset(0 0 0 0);
+}
