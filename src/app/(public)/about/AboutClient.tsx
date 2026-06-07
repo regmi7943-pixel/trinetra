@@ -16,28 +16,28 @@ const coreValues = [
     icon: Target,
     title: "Precision",
     description:
-      "Every diagnosis and treatment is guided by the latest technology and meticulous attention to detail.",
+      "Every diagnosis is guided by the latest technology and a meticulous, personal attention to your unique needs.",
     gradient: "linear-gradient(180deg, #FBE6A2 0%, #E3CC87 100%)",
   },
   {
     icon: Heart,
     title: "Compassion",
     description:
-      "We treat every patient like family, ensuring comfort and care at every step of the journey.",
+      "We treat every patient like family, ensuring your visit feels perfectly human, comforting, and deeply caring.",
     gradient: "linear-gradient(180deg, #93A9AF 0%, #5C6E75 100%)",
   },
   {
     icon: Eye,
     title: "Accessibility",
     description:
-      "World-class eye care made accessible to everyone in our community, regardless of background.",
+      "World-class, heartfelt eye care made warmly available to everyone in our community, regardless of background.",
     gradient: "linear-gradient(180deg, #E6DCF0 0%, #7586A4 100%)",
   },
   {
     icon: Award,
     title: "Excellence",
     description:
-      "We hold ourselves to the highest international standards in ophthalmic care and patient outcomes.",
+      "We hold ourselves to the highest standards, driven by a steadfast dedication to your vision and overall well-being.",
     gradient: "linear-gradient(180deg, #A4CEB5 0%, #6FA084 100%)",
   },
 ];
@@ -65,8 +65,8 @@ const facilityImages = [
   },
   {
     src: "https://images.unsplash.com/photo-1551076805-e1869043e560?w=600&q=80",
-    alt: "State of the art surgical theater",
-    label: "Surgical Theater",
+    alt: "State of the art diagnostic optometry lab",
+    label: "Diagnostic Optometry Lab",
   },
 ];
 
@@ -265,8 +265,8 @@ export default function AboutClient({ content }: AboutClientProps) {
             <Eye className="w-8 h-8 text-[#FF055F]" />
           </div>
 
-          <EditableText page="about" contentKey="hero_title" defaultText={content["hero_title"] || "About Trinetra Eye Care"} as="h1" className="about-hero-title text-4xl md:text-6xl font-serif font-bold text-[var(--color-chocolate,#2C1810)] mb-6 leading-tight" />
-          <EditableText page="about" contentKey="hero_subtitle" defaultText={content["hero_subtitle"] || "A center of excellence in ophthalmic care, where world-class expertise meets heartfelt compassion in the heart of Nepal."} as="p" className="about-hero-subtitle text-lg md:text-xl text-[#5C4033] max-w-2xl mx-auto leading-relaxed" />
+          <EditableText page="about" contentKey="hero_title" defaultText={content["hero_title"] || "Partners in Your Eye Health"} as="h1" className="about-hero-title text-4xl md:text-6xl font-serif font-bold text-[var(--color-chocolate,#2C1810)] mb-6 leading-tight" />
+          <EditableText page="about" contentKey="hero_subtitle" defaultText={content["hero_subtitle"] || "We are dedicated to your vision, offering world-class expertise with heartfelt, personal care right here in Nepal."} as="p" className="about-hero-subtitle text-lg md:text-xl text-[#5C4033] max-w-2xl mx-auto leading-relaxed" />
         </div>
       </section>
 
@@ -285,7 +285,7 @@ export default function AboutClient({ content }: AboutClientProps) {
           </div>
 
           <div className="space-y-6">
-            <EditableText page="about" contentKey="story_title" defaultText={content["story_title"] || "A Vision Born from Global Experience"} as="h2" className="story-line text-3xl md:text-4xl font-serif font-bold text-[var(--color-chocolate,#2C1810)] leading-snug" />
+            <EditableText page="about" contentKey="story_title" defaultText={content["story_title"] || "We believe a visit to the eye doctor shouldn't feel cold and clinical. It should feel perfectly human."} as="h2" className="story-line text-3xl md:text-4xl font-serif font-bold text-[var(--color-chocolate,#2C1810)] leading-snug" />
             <div className="story-line">
               <div className="inline-flex items-center gap-3 text-2xl sm:text-3xl font-bold text-[var(--color-chocolate)] mb-4">
                 <EditableText page="about" contentKey="story_doctor_name" defaultText={content["story_doctor_name"] || "Bijay Regmi"} as="span" />
@@ -297,18 +297,18 @@ export default function AboutClient({ content }: AboutClientProps) {
               </div>
               
               <p className="text-base sm:text-lg text-[var(--color-chocolate-muted)] leading-relaxed">
-                <EditableText page="about" contentKey="story_p1" defaultText={content["story_p1"] || "Trinetra Eye Care Center was founded by Bijay Regmi, a dedicated optometrist who spent over 15 years honing his clinical skills across Germany and the Middle East."} />
+                <EditableText page="about" contentKey="story_p1" defaultText={content["story_p1"] || "Trinetra Eye Care Center was founded by Bijay Regmi, an optometrist who wanted to create a space where patients feel truly cared for, rather than just treated."} />
               </p>
             </div>
             
             <p className="text-[var(--color-chocolate-muted)] text-base sm:text-lg leading-relaxed mb-6">
-              <EditableText page="about" contentKey="story_p2" defaultText={content["story_p2"] || "During his years abroad, Bijay trained at some of the world's most prestigious vision institutions, mastering advanced diagnostic techniques and adopting patient care philosophies that prioritize both precision and empathy."} />
+              <EditableText page="about" contentKey="story_p2" defaultText={content["story_p2"] || "After over 15 years refining his skills in Germany and the Middle East, Bijay saw the need for a practice that goes beyond transactional clinical services. He envisioned a clinic where advanced diagnostics go hand-in-hand with deep empathy and human connection."} />
             </p>
             <p className="story-line text-lg text-[#5C4033] leading-relaxed">
-              <EditableText page="about" contentKey="story_p3" defaultText={content["story_p3"] || "Driven by a deep desire to bring world-class eye care to his homeland, he returned to Nepal and established Trinetra Eye Care Center — a place where international standards of treatment meet the warmth and understanding of a community-focused practice."} />
+              <EditableText page="about" contentKey="story_p3" defaultText={content["story_p3"] || "Returning to Nepal, he established Trinetra to be exactly that — a place where we serve as true partners in your eye health, combining international standards with the warmth of a close-knit community practice."} />
             </p>
             <p className="story-line text-lg text-[#5C4033] leading-relaxed">
-              <EditableText page="about" contentKey="story_p4" defaultText={content["story_p4"] || "The name “Trinetra” — meaning “three eyes” — symbolizes our commitment to seeing beyond the surface: to understand each patient's unique needs, to envision the best possible outcomes, and to watch over our community's eye health with unwavering dedication."} />
+              <EditableText page="about" contentKey="story_p4" defaultText={content["story_p4"] || "The name “Trinetra” — meaning “three eyes” — symbolizes our commitment to seeing you as a whole person. We are entirely dedicated to your vision, taking the time to understand your unique needs and ensuring your comfort at every step."} />
             </p>
           </div>
         </div>
@@ -335,7 +335,7 @@ export default function AboutClient({ content }: AboutClientProps) {
                 <Target className="w-6 h-6 text-[#FF055F]" />
               </div>
               <EditableText page="about" contentKey="mission_title" defaultText={content["mission_title"] || "Our Mission"} as="h3" className="text-2xl font-serif font-bold text-[var(--color-chocolate,#2C1810)] mb-4" />
-              <EditableText page="about" contentKey="mission_desc" defaultText={content["mission_desc"] || "To provide accessible, compassionate, and world-class ophthalmic care to every individual who walks through our doors. We strive to combine the latest advancements in eye care technology with a deeply personal approach to patient well-being, ensuring that quality eye health services are within reach for all."} as="p" className="text-[#5C4033] leading-relaxed" />
+              <EditableText page="about" contentKey="mission_desc" defaultText={content["mission_desc"] || "To be more than just a clinic — to be your lifelong partners in eye health. We provide accessible, compassionate care, ensuring that every person who walks through our doors feels heard, understood, and perfectly cared for."} as="p" className="text-[#5C4033] leading-relaxed" />
             </div>
 
             {/* Vision Card */}
@@ -344,7 +344,7 @@ export default function AboutClient({ content }: AboutClientProps) {
                 <Eye className="w-6 h-6 text-[#0EA5A5]" />
               </div>
               <EditableText page="about" contentKey="vision_title" defaultText={content["vision_title"] || "Our Vision"} as="h3" className="text-2xl font-serif font-bold text-[var(--color-chocolate,#2C1810)] mb-4" />
-              <EditableText page="about" contentKey="vision_desc" defaultText={content["vision_desc"] || "To be the most trusted name in eye care across Nepal — a center where patients receive treatment that rivals the best in the world. We envision a future where preventable blindness is eliminated and every person has access to the gift of clear, healthy vision throughout their life."} as="p" className="text-[#5C4033] leading-relaxed" />
+              <EditableText page="about" contentKey="vision_desc" defaultText={content["vision_desc"] || "To be a sanctuary of healing and the most trusted name in eye care across Nepal. By remaining deeply dedicated to your vision, we envision a community where everyone has access to the gift of clear, healthy vision through personalized, human-centered care."} as="p" className="text-[#5C4033] leading-relaxed" />
             </div>
           </div>
         </div>
@@ -490,8 +490,8 @@ export default function AboutClient({ content }: AboutClientProps) {
             
             
           >
-            <EditableText page="about" contentKey="cta_title" defaultText={content["cta_title"] || "Experience the Trinetra Difference"} as="h2" className="text-3xl md:text-4xl font-serif font-bold text-[var(--color-chocolate,#2C1810)] mb-6" />
-            <EditableText page="about" contentKey="cta_desc" defaultText={content["cta_desc"] || "Join thousands of patients who trust us with their vision. Schedule your consultation today and discover compassionate, world-class eye care."} as="p" className="text-lg text-[#5C4033] mb-8 leading-relaxed" />
+            <EditableText page="about" contentKey="cta_title" defaultText={content["cta_title"] || "Let's Care for Your Vision Together"} as="h2" className="text-3xl md:text-4xl font-serif font-bold text-[var(--color-chocolate,#2C1810)] mb-6" />
+            <EditableText page="about" contentKey="cta_desc" defaultText={content["cta_desc"] || "Join thousands of patients who trust us as their partners in eye health. Schedule your visit today and experience care that feels perfectly human."} as="p" className="text-lg text-[#5C4033] mb-8 leading-relaxed" />
             <a
               href="/contact"
               

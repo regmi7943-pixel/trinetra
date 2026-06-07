@@ -12,6 +12,7 @@ import {
   LogOut,
   Menu,
   X,
+  Settings,
 } from "lucide-react";
 
 export default function AdminLayout({
@@ -72,6 +73,7 @@ export default function AdminLayout({
     { name: "Content Editor", href: "/admin/content", icon: Type },
     { name: "Services", href: "/admin/services", icon: Activity },
     { name: "Eyewear", href: "/admin/eyewear", icon: Glasses },
+    { name: "Settings", href: "/admin/settings", icon: Settings },
   ];
 
   const isContentEditor = pathname === "/admin/content";

@@ -17,7 +17,7 @@ const services = [
     icon: Eye,
     title: "Eye Examination",
     description:
-      "Comprehensive eye health assessments using modern diagnostic techniques. Our thorough examinations detect early signs of eye conditions, ensuring your vision stays sharp and healthy.",
+      "High-tech precision meets high-touch comfort. Our thorough, gentle examinations detect the earliest signs of eye conditions, ensuring your vision stays effortlessly sharp and your mind at ease.",
     image: "https://images.unsplash.com/photo-1551884170-09fb70a3a2ed?w=600&q=80",
     highlights: [
       "Visual acuity testing",
@@ -31,7 +31,7 @@ const services = [
     icon: Microscope,
     title: "Computerized Eye Power Check-Up",
     description:
-      "State-of-the-art computerized refraction technology for precise measurement of your eye power. Get accurate prescriptions with our advanced autorefraction equipment.",
+      "Transforming uncertainty into clarity. We use state-of-the-art, non-invasive technology to precisely measure your vision, giving you a perfectly tailored prescription without the guesswork.",
     image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=600&q=80",
     highlights: [
       "Autorefraction testing",
@@ -45,7 +45,7 @@ const services = [
     icon: Glasses,
     title: "Prescription Glasses",
     description:
-      "A curated collection of designer frames paired with precision-crafted lenses. From everyday essentials to premium eyewear, find the perfect pair for your lifestyle.",
+      "More than just visual aids, your glasses should feel like an extension of you. We pair curated designer frames with precision-crafted lenses so you can step out feeling confident and comfortable.",
     image: "https://images.unsplash.com/photo-1574258495973-f010dfbb5371?w=600&q=80",
     highlights: [
       "Designer frame selection",
@@ -59,7 +59,7 @@ const services = [
     icon: HeartHandshake,
     title: "Eye Condition Consultation",
     description:
-      "Expert consultation for a wide range of eye conditions. From dry eyes to more complex concerns, our experienced team provides personalized treatment plans and ongoing care.",
+      "Navigating eye health doesn’t have to feel clinical or confusing. We listen deeply to your concerns—from dry eyes to specialized needs—and design a personalized, reassuring path to lasting relief.",
     image: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=600&q=80",
     highlights: [
       "Dry eye management",
@@ -138,7 +138,7 @@ export default function ServicesClient({ content }: { content: Record<string, st
             <EditableText
               page="services"
               contentKey="hero_badge"
-              defaultText={content?.hero_badge || "Our Services"}
+              defaultText={content?.hero_badge || "Patient-Centered Care"}
               as="span"
               className="text-sm font-medium tracking-wide uppercase"
               style={{ color: "var(--color-chocolate, #2C1810)" }}
@@ -148,7 +148,7 @@ export default function ServicesClient({ content }: { content: Record<string, st
           <EditableText
             page="services"
             contentKey="hero_title"
-            defaultText={content?.hero_title || "Comprehensive Eye Care Services"}
+            defaultText={content?.hero_title || "Clear Vision, Compassionate Care"}
             as="h1"
             className="reveal-text text-4xl md:text-5xl lg:text-6xl font-serif font-bold leading-tight mb-6"
           />
@@ -156,7 +156,7 @@ export default function ServicesClient({ content }: { content: Record<string, st
           <EditableText
             page="services"
             contentKey="hero_description"
-            defaultText={content?.hero_description || "From routine check-ups to specialized consultations, we provide a full spectrum of eye care services tailored to your unique needs."}
+            defaultText={content?.hero_description || "High-tech precision meets high-touch comfort. We provide a full spectrum of eye care services designed around you—transforming uncertainty into clarity, so you can see the world beautifully."}
             as="p"
             className="reveal-text text-lg md:text-xl max-w-2xl mx-auto leading-relaxed"
             style={{ color: "rgba(44,24,16,0.7)" }}
@@ -262,14 +262,14 @@ export default function ServicesClient({ content }: { content: Record<string, st
           <EditableText
             page="services"
             contentKey="cta_title"
-            defaultText={content?.cta_title || "Ready to Take Care of Your Eyes?"}
+            defaultText={content?.cta_title || "Ready for a Clearer Tomorrow?"}
             as="h2"
             className="text-3xl md:text-4xl font-serif font-bold text-white mb-4 relative z-10"
           />
           <EditableText
             page="services"
             contentKey="cta_description"
-            defaultText={content?.cta_description || "Book an appointment with our experienced team and give your eyes the care they deserve."}
+            defaultText={content?.cta_description || "Take the first step toward effortless vision. Book a warm, welcoming consultation with our team today."}
             as="p"
             className="text-lg text-white/70 mb-8 max-w-xl mx-auto relative z-10"
           />

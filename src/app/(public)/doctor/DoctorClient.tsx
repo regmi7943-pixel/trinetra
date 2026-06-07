@@ -11,31 +11,26 @@ import { EditableImage } from "@/components/EditableImage";
 gsap.registerPlugin(ScrollTrigger);
 
 const qualifications = [
-  "MBBS — Tribhuvan University, Nepal",
-  "MD (Ophthalmology) — Institute of Medicine, Kathmandu",
-  "Fellowship in Cornea & Refractive Surgery — Germany",
-  "Advanced Training in Cataract & Glaucoma — Middle East",
-  "Member, Nepal Ophthalmic Society",
-  "Member, Asia-Pacific Academy of Ophthalmology",
+  "BOptom — Tribhuvan University, Nepal",
+  "Advanced Training in Clinical Optometry — Germany",
+  "Specialized Training in Contact Lenses — Middle East",
+  "Member, Nepal Optometry Association",
 ];
 
 const expertiseAreas = [
-  "Cataract Surgery",
-  "LASIK & Refractive Surgery",
-  "Corneal Transplantation",
-  "Glaucoma Management",
-  "Diabetic Retinopathy",
-  "Pediatric Ophthalmology",
-  "Oculoplastics",
   "Comprehensive Eye Exams",
   "Contact Lens Fitting",
+  "Dry Eye Management",
+  "Binocular Vision Therapy",
+  "Pediatric Optometry",
   "Low Vision Rehabilitation",
+  "Computer Vision Syndrome",
 ];
 
 const milestones = [
   { label: "Years of Experience", value: "15+", icon: Award },
   { label: "Countries Trained In", value: "5+", icon: MapPin },
-  { label: "Surgeries Performed", value: "10,000+", icon: Stethoscope },
+  { label: "Patients Treated", value: "10,000+", icon: Stethoscope },
   { label: "Specializations", value: "6+", icon: GraduationCap },
 ];
 
@@ -203,10 +198,9 @@ export default function DoctorClient({ content }: DoctorClientProps) {
                 </p>
                 <p className="text-lg text-[#5C4033] leading-relaxed mb-6">
                   With over 15 years of international experience across Germany and
-                  the Middle East, Bijay brings world-class optometric
-                  expertise to Nepal. His vision is simple: every person deserves
-                  access to the highest quality eye care, delivered with genuine
-                  compassion.
+                  the Middle East, Bijay brings world-class clinical excellence
+                  to Nepal. We don't just look at your eyes—we listen to you. 
+                  Because your vision is deeply personal, and we are in this together.
                 </p>
 
                 {/* Quick stats */}
@@ -269,34 +263,28 @@ export default function DoctorClient({ content }: DoctorClientProps) {
 
           <div className="space-y-5">
             <p className="bio-line text-lg text-[#5C4033] leading-relaxed">
-              Bijay Regmi&rsquo;s journey in optometry is one of relentless
-              pursuit of excellence and deep commitment to serving others. After
-              completing his  studies with top honors, he embarked on a
-              career that would take him across continents to refine his clinical skills.
+              Bijay Regmi&rsquo;s journey in optometry isn&rsquo;t just about degrees and
+              certifications—it&rsquo;s an empathy-driven story of caring for the people behind the eyes.
+              After completing his studies with top honors, he embarked on a
+              global journey to elevate his clinical excellence.
             </p>
             <p className="bio-line text-lg text-[#5C4033] leading-relaxed">
-              In Germany, Bijay completed extensive training in advanced diagnostics
-              and ocular surface care, working alongside leading European
-              optometrists and gaining hands-on experience with the most
-              advanced diagnostic technologies available. This rigorous training
-              sharpened his technical precision and instilled in him a commitment
-              to evidence-based practice.
+              In Germany, Bijay worked alongside leading European
+              optometrists, immersing himself in advanced diagnostics and ocular surface care.
+              But beyond the state-of-the-art technology, he learned that true healing begins
+              with a warm, highly-human connection.
             </p>
             <p className="bio-line text-lg text-[#5C4033] leading-relaxed">
-              His subsequent years in the Middle East further broadened his
-              expertise, exposing him to a diverse patient population and a wide
-              spectrum of optometric conditions. During this time, he conducted
-              thousands of comprehensive eye assessments and specialized contact
-              lens fittings, building a reputation for clinical excellence and
-              compassionate care.
+              During his years in the Middle East, he encountered a beautifully diverse
+              range of patients and complex conditions. Conducting thousands of comprehensive
+              assessments, he built a reputation not just for clinical excellence,
+              but for his deeply patient-centric approach—always ensuring every patient felt seen and heard.
             </p>
             <p className="bio-line text-lg text-[#5C4033] leading-relaxed">
               Returning to Nepal, Bijay founded Trinetra Eye Care Center with
-              a singular mission: to ensure that every Nepali has access to the
-              same quality of eye care available anywhere in the world. Under his
-              leadership, the center has grown into a trusted institution,
-              combining cutting-edge technology with the kind of personal attention
-              that makes patients feel truly cared for.
+              a heartfelt mission: to bring world-class, personalized care home.
+              Here, we combine cutting-edge technology with the comforting reassurance that
+              we are in this together, making every visit a supportive and deeply personal experience.
             </p>
           </div>
         </div>
@@ -312,10 +300,9 @@ export default function DoctorClient({ content }: DoctorClientProps) {
             <Quote className="w-10 h-10 text-[#D4A574]/40 mb-6" />
 
             <blockquote className="text-xl md:text-2xl font-serif text-[var(--color-chocolate,#2C1810)] leading-relaxed mb-6 italic">
-              &ldquo;The eyes are not just organs — they are windows to the soul and
-              gateways to the world. Every patient who entrusts me with their
-              vision entrusts me with their life&rsquo;s most precious gift. I carry
-              that responsibility with humility and unwavering dedication.&rdquo;
+              &ldquo;We don&rsquo;t just look at your eyes—we listen to you. Because your vision
+              is deeply personal. When you entrust us with your sight, you receive not just
+              clinical excellence, but a partner who truly cares. We are in this together.&rdquo;
             </blockquote>
 
             <div className="flex items-center gap-3">
@@ -386,7 +373,7 @@ export default function DoctorClient({ content }: DoctorClientProps) {
 
               <div className="bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-[0_4px_30px_rgba(44,24,16,0.08)] border border-[var(--color-warm-border,#E8DDD1)]">
                 <p className="text-[#5C4033] leading-relaxed mb-4">
-                  Bijay&rsquo;s clinical philosophy centers on three pillars:
+                  Bijay&rsquo;s clinical philosophy is rooted in deep empathy:
                 </p>
                 <div className="space-y-4">
                   <div className="flex items-start gap-3">
@@ -395,11 +382,10 @@ export default function DoctorClient({ content }: DoctorClientProps) {
                     </div>
                     <div>
                       <p className="font-semibold text-[var(--color-chocolate,#2C1810)] mb-1">
-                        Patient-Centered Care
+                        Personalized Care
                       </p>
                       <p className="text-sm text-[#5C4033]">
-                        Every treatment plan is tailored to the individual, taking
-                        into account their lifestyle, needs, and concerns.
+                        Your vision is unique. We take the time to listen, ensuring every treatment plan honors your individual lifestyle, needs, and concerns.
                       </p>
                     </div>
                   </div>
@@ -409,11 +395,10 @@ export default function DoctorClient({ content }: DoctorClientProps) {
                     </div>
                     <div>
                       <p className="font-semibold text-[var(--color-chocolate,#2C1810)] mb-1">
-                        Evidence-Based Medicine
+                        Clinical Excellence
                       </p>
                       <p className="text-sm text-[#5C4033]">
-                        All decisions are grounded in the latest research and
-                        proven clinical methodologies from around the world.
+                        Warmth meets expertise. Our decisions are grounded in world-class research, bringing the highest standard of global eye care to you.
                       </p>
                     </div>
                   </div>
@@ -423,11 +408,10 @@ export default function DoctorClient({ content }: DoctorClientProps) {
                     </div>
                     <div>
                       <p className="font-semibold text-[var(--color-chocolate,#2C1810)] mb-1">
-                        Continuous Innovation
+                        In This Together
                       </p>
                       <p className="text-sm text-[#5C4033]">
-                        Staying at the forefront of optometric advances through
-                        ongoing training, conferences, and research participation.
+                        We partner with you for lifelong eye health. From the first greeting to ongoing care, you are never just a patient—you are family.
                       </p>
                     </div>
                   </div>
@@ -484,12 +468,11 @@ export default function DoctorClient({ content }: DoctorClientProps) {
             
           >
             <h2 className="text-3xl md:text-4xl font-serif font-bold text-[var(--color-chocolate,#2C1810)] mb-6">
-              Consult with Bijay Regmi
+              Let&rsquo;s Care For Your Vision
             </h2>
             <p className="text-lg text-[#5C4033] mb-8 leading-relaxed">
-              Take the first step towards clearer vision. Book a personal
-              consultation with Bijay Regmi and experience the care of a
-              world-class optometrist.
+              Take the first step towards clearer vision in a warm, welcoming environment. 
+              Book a personal consultation today and experience clinical excellence delivered with genuine empathy.
             </p>
             <a
               href="/contact"

@@ -6,27 +6,27 @@ import { Eye, MapPin, Phone, Mail, Clock, Link2, Globe } from "lucide-react";
 
 const footerLinks = [
   { name: "Home", path: "/" },
-  { name: "About Us", path: "/about" },
-  { name: "Services", path: "/services" },
-  { name: "Eyewear Collection", path: "/eyewear" },
-  { name: "Patient Reviews", path: "/reviews" },
-  { name: "Contact Us", path: "/contact" },
+  { name: "Our Story & Care Team", path: "/about" },
+  { name: "Explore our vision services", path: "/services" },
+  { name: "Discover Eyewear Collection", path: "/eyewear" },
+  { name: "Patient Experiences", path: "/reviews" },
+  { name: "Book", path: "/contact" },
 ];
 
 const services = [
-  "Eye Examination",
+  "Comprehensive Eye Examination",
   "Computerized Eye Power Check-Up",
-  "Prescription Glasses",
+  "Premium Prescription Glasses",
   "Eye Condition Consultation",
 ];
 
-const socialLinks = [
-  { icon: Globe, label: "Website", href: "#", hoverColor: "hover:text-[var(--color-primary)]" },
-  { icon: Link2, label: "Social Link", href: "#", hoverColor: "hover:text-[var(--color-warm-accent)]" },
-  { icon: Globe, label: "More", href: "#", hoverColor: "hover:text-[var(--color-primary)]" },
-];
 
-export const Footer = () => {
+
+interface FooterProps {
+  content?: Record<string, string>;
+}
+
+export const Footer = ({ content = {} }: FooterProps) => {
   const [isEditMode, setIsEditMode] = useState(false);
 
   useEffect(() => {
@@ -60,27 +60,38 @@ export const Footer = () => {
             </Link>
             <p className="text-[var(--color-chocolate-muted)] text-sm leading-relaxed">
               Bringing world-class, international standard eye care right here
-              to Pokhara. Precision, compassion, and innovation in every
-              check-up.
+              to Pokhara. Precision, compassion, and a listening ear in every visit.
             </p>
             <div className="flex gap-3 pt-2">
-              {socialLinks.map((social, index) => (
+              {content.settings_social_fb && (
                 <a
-                  key={index}
-                  href={social.href}
-                  aria-label={social.label}
-                  className={`p-2.5 rounded-xl bg-[var(--color-cream)] border border-[var(--color-warm-border)] text-[var(--color-chocolate-muted)] ${social.hoverColor} hover:border-[var(--color-warm-accent)] transition-all duration-300`}
+                  href={content.settings_social_fb}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Facebook"
+                  className={`p-2.5 rounded-xl bg-[var(--color-cream)] border border-[var(--color-warm-border)] text-[var(--color-chocolate-muted)] hover:text-[var(--color-primary)] hover:border-[var(--color-warm-accent)] transition-all duration-300`}
                 >
-                  <social.icon size={16} />
+                  <Globe size={16} />
                 </a>
-              ))}
+              )}
+              {content.settings_social_ig && (
+                <a
+                  href={content.settings_social_ig}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Instagram"
+                  className={`p-2.5 rounded-xl bg-[var(--color-cream)] border border-[var(--color-warm-border)] text-[var(--color-chocolate-muted)] hover:text-[var(--color-warm-accent)] hover:border-[var(--color-warm-accent)] transition-all duration-300`}
+                >
+                  <Link2 size={16} />
+                </a>
+              )}
             </div>
           </div>
 
           {/* Quick Links */}
           <div>
             <h4 className="text-[var(--color-chocolate)] font-semibold text-base mb-6">
-              Quick Links
+              Explore
             </h4>
             <ul className="space-y-3">
               {footerLinks.map((link) => (
@@ -100,7 +111,7 @@ export const Footer = () => {
           {/* Services */}
           <div>
             <h4 className="text-[var(--color-chocolate)] font-semibold text-base mb-6">
-              Our Services
+              How We Help
             </h4>
             <ul className="space-y-3">
               {services.map((service) => (
@@ -120,15 +131,14 @@ export const Footer = () => {
           {/* Contact Info */}
           <div>
             <h4 className="text-[var(--color-chocolate)] font-semibold text-base mb-6">
-              Contact Us
+              Connect With Our Care Team
             </h4>
             <ul className="space-y-4">
               <li className="flex items-start gap-3">
                 <div className="p-1.5 rounded-lg bg-[var(--color-primary)]/10 mt-0.5 shrink-0">
                   <MapPin size={16} className="text-[var(--color-primary)]" />
                 </div>
-                <p className="text-[var(--color-chocolate-muted)] text-sm leading-relaxed group-hover:text-[var(--color-chocolate)] transition-colors">
-                  Prithivichowk-8, Pokhara 33700<br />(opposite Nepal Bank)
+                <p className="text-[var(--color-chocolate-muted)] text-sm leading-relaxed group-hover:text-[var(--color-chocolate)] transition-colors" dangerouslySetInnerHTML={{ __html: content.settings_address || "Prithivichowk-8, Pokhara 33700<br />(opposite Nepal Bank)" }}>
                 </p>
               </li>
 
@@ -137,10 +147,10 @@ export const Footer = () => {
                   <Phone size={16} className="text-[var(--color-warm-accent)]" />
                 </div>
                 <a
-                  href="tel:+9779856064940"
+                  href={`tel:${content.settings_phone_call || "+9779856064940"}`}
                   className="text-[var(--color-chocolate-muted)] text-sm font-medium hover:text-[var(--color-chocolate)] transition-colors"
                 >
-                  +977 9856064940
+                  {content.settings_phone_call || "+977 9856064940"}
                 </a>
               </li>
 
@@ -149,10 +159,10 @@ export const Footer = () => {
                   <Mail size={16} className="text-[var(--color-chocolate-muted)]" />
                 </div>
                 <a
-                  href="mailto:info@trinetraeyecare.com.np"
+                  href={`mailto:${content.settings_email || "info@trinetraeyecare.com.np"}`}
                   className="text-[var(--color-chocolate-muted)] text-sm hover:text-[var(--color-chocolate)] transition-colors duration-300"
                 >
-                  info@trinetraeyecare.com.np
+                  {content.settings_email || "info@trinetraeyecare.com.np"}
                 </a>
               </li>
               <li className="flex items-start gap-3 pt-1">
@@ -160,8 +170,8 @@ export const Footer = () => {
                   <Clock size={16} className="text-[var(--color-chocolate-muted)]" />
                 </div>
                 <div className="text-[var(--color-chocolate-muted)] text-sm">
-                  <p>Sun – Fri: 9:00 AM – 6:00 PM</p>
-                  <p className="text-[var(--color-chocolate-muted)]/60">Saturday: Closed</p>
+                  <p>{content.settings_hours_week || "Sun – Fri: 9:00 AM – 6:00 PM"}</p>
+                  <p className="text-[var(--color-chocolate-muted)]/60">{content.settings_hours_weekend || "Saturday: Closed"}</p>
                 </div>
               </li>
             </ul>

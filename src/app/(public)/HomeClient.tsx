@@ -9,34 +9,44 @@ import { ArrowRight, Phone, MapPin, Clock, Star, ShieldCheck, Microscope, HeartH
 import { useLanguage } from "@/context/language-context";
 import { EditableText } from "@/components/EditableText";
 import { EditableImage } from "@/components/EditableImage";
-
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { EffectCards } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/effect-cards';
 
 gsap.registerPlugin(ScrollTrigger);
 
 const MobileCarousel = ({ services }: { services: any[] }) => {
   return (
-    <div className="w-full overflow-x-auto flex gap-4 px-6 pb-8 snap-x snap-mandatory hide-scrollbar">
-      {services.map((service) => (
-        <div
-          key={service.slug}
-          className="snap-center shrink-0 w-[85vw] max-w-[320px] h-[360px] rounded-3xl p-8 flex flex-col justify-end shadow-[0_20px_60px_rgba(0,0,0,0.15)] relative"
-          style={{
-            background: service.gradient,
-          }}
-        >
-          <div className="absolute top-6 left-8 w-12 h-12 rounded-2xl bg-white/15 backdrop-blur-sm flex items-center justify-center text-white border border-white/20">
-            {service.icon}
-          </div>
-          <div>
-            <h3 className="text-2xl sm:text-3xl font-bold text-white mb-3 leading-tight">
-              {service.title}
-            </h3>
-            <p className="text-sm sm:text-base text-white/80 leading-relaxed max-w-sm">
-              {service.desc}
-            </p>
-          </div>
-        </div>
-      ))}
+    <div className="w-full flex justify-center pb-8 mt-6 overflow-visible">
+      <Swiper
+        effect={'cards'}
+        grabCursor={true}
+        modules={[EffectCards]}
+        className="w-[280px] h-[380px]"
+      >
+        {services.map((service) => (
+          <SwiperSlide
+            key={service.slug}
+            className="rounded-3xl p-8 flex flex-col justify-end shadow-[0_20px_60px_rgba(0,0,0,0.15)] relative overflow-hidden"
+            style={{
+              background: service.gradient,
+            }}
+          >
+            <div className="absolute top-6 left-8 w-12 h-12 rounded-2xl bg-white/15 backdrop-blur-sm flex items-center justify-center text-white border border-white/20">
+              {service.icon}
+            </div>
+            <div>
+              <h3 className="text-2xl sm:text-3xl font-bold text-white mb-3 leading-tight">
+                {service.title}
+              </h3>
+              <p className="text-sm sm:text-base text-white/80 leading-relaxed max-w-sm">
+                {service.desc}
+              </p>
+            </div>
+          </SwiperSlide>
+        ))}
+      </Swiper>
     </div>
   );
 };
@@ -202,21 +212,21 @@ export default function HomeClient({ content }: { content: Record<string, string
   const services = [
     {
       title: content.srv_t1 || "Optometry & Eye Exams",
-      desc: content.srv_d1 || "Thorough vision testing and ocular health assessment using world-class diagnostic tools.",
+      desc: content.srv_d1 || "Thorough, gentle vision testing and ocular health assessments designed to protect your sight.",
       icon: <Eye size={28} />,
       slug: "eye-examination",
       gradient: "linear-gradient(135deg, #FF055F 0%, #D4A574 100%)",
     },
     {
       title: content.srv_t2 || "Computerized Power Check",
-      desc: content.srv_d2 || "Digital precision for your exact lens prescription with advanced auto-refraction technology.",
+      desc: content.srv_d2 || "Digital precision providing an objective baseline so you get exactly the prescription you need.",
       icon: <Microscope size={28} />,
       slug: "computerized-eye-power-check-up",
       gradient: "linear-gradient(135deg, #2C6E63 0%, #5CBFB0 100%)",
     },
     {
       title: content.srv_t3 || "Optical Sales & Eyewear",
-      desc: content.srv_d3 || "Curated frames, sunglasses, and advanced prescription lenses tailored to your lifestyle.",
+      desc: content.srv_d3 || "Beautifully curated frames and advanced prescription lenses tailored perfectly to your daily life.",
       icon: <Star size={28} />,
       slug: "optical-sales",
       gradient: "linear-gradient(135deg, #7B5EA7 0%, #A78BFA 100%)",
@@ -237,7 +247,7 @@ export default function HomeClient({ content }: { content: Record<string, string
               {/* Rated Badge (Desktop Only) */}
               <div className="hidden lg:inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[var(--color-primary)]/10 text-[var(--color-primary)] text-sm font-semibold mb-8">
                 <Star size={14} className="fill-current" />
-                <EditableText page="home" contentKey="hero_badge" defaultText={content.hero_badge || "Rated 5.0 on Google • Pokhara's Trusted Eye Clinic"} />
+                <EditableText page="home" contentKey="hero_badge" defaultText={content.hero_badge || "Rated 5.0 on Google • Pokhara's Trusted Eye Care Center"} />
               </div>
 
               {/* Mobile Welcome Text */}
@@ -245,12 +255,12 @@ export default function HomeClient({ content }: { content: Record<string, string
                 <EditableText page="home" contentKey="hero_welcome" defaultText={content.hero_welcome || "Welcome To"} />
               </p>
 
-              <h1 className="hero-title text-4xl sm:text-5xl lg:text-7xl xl:text-8xl font-semibold leading-[1.05] tracking-[-0.03em] text-white lg:text-[var(--color-chocolate)] mb-3 lg:mb-8">
-                <EditableText as="span" page="home" contentKey="hero_title" defaultText={content.hero_title || "Precision vision, modern care"} />
+              <h1 className="hero-title text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-semibold leading-[1.05] tracking-[-0.03em] text-white lg:text-[var(--color-chocolate)] mb-3 lg:mb-8">
+                <EditableText as="span" page="home" contentKey="hero_title" defaultText={content.hero_title || "See the life you love, beautifully. Modern eye care designed entirely around you."} />
               </h1>
 
               <p className="hero-sub text-base sm:text-lg md:text-2xl text-white/90 lg:text-[var(--color-chocolate-muted)] font-light mb-8 max-w-xl leading-relaxed">
-                <EditableText as="span" page="home" contentKey="hero_sub" defaultText={content.hero_sub || "Eye care with 15+ years of international expertise by Bijay Regmi."} />
+                <EditableText as="span" page="home" contentKey="hero_sub" defaultText={content.hero_sub || "Experience a gentler, more thoughtful approach to your eye health with 15+ years of international expertise by Bijay Regmi."} />
               </p>
 
               <div className="flex flex-col sm:flex-row gap-3 lg:gap-4">
@@ -258,7 +268,7 @@ export default function HomeClient({ content }: { content: Record<string, string
                   href="/appointment"
                   className="hero-cta group w-full lg:w-auto inline-flex flex-1 min-w-0 items-center justify-center gap-2 px-6 py-4 rounded-xl lg:rounded-full bg-white lg:bg-[var(--color-primary)] text-[var(--color-chocolate)] lg:text-white font-bold text-base sm:text-lg transition-all hover:shadow-[0_8px_30px_rgba(255,255,255,0.2)] lg:hover:shadow-[0_8px_30px_rgba(255,5,95,0.3)] hover:scale-[1.02] active:scale-[0.98]"
                 >
-                  <span className="lg:hidden uppercase tracking-widest text-sm"><EditableText as="span" page="home" contentKey="btn_book" defaultText={content.btn_book || "Book Appointment"} /></span>
+                  <span className="lg:hidden uppercase tracking-widest text-sm"><EditableText as="span" page="home" contentKey="btn_book" defaultText={content.btn_book || "Book"} /></span>
                   <span className="hidden lg:inline">{t("btn.book")}</span>
                   <ArrowRight size={18} className="lg:hidden" />
                   <ArrowRight size={20} className="hidden lg:block group-hover:translate-x-1 transition-transform" />
@@ -361,7 +371,7 @@ export default function HomeClient({ content }: { content: Record<string, string
                 <div className="hidden md:flex h-8 w-px bg-[var(--color-warm-border)] mx-2"></div>
                 <div className="flex items-center gap-2 text-[var(--color-primary)] font-medium bg-[var(--color-primary)]/10 px-4 py-2 rounded-full w-fit">
                   <HeartHandshake size={18} />
-                  <span>Lead Optometrist</span>
+                  <span>Founder & Optometrist</span>
                 </div>
               </div>
 
@@ -451,19 +461,19 @@ export default function HomeClient({ content }: { content: Record<string, string
           <div className="grid md:grid-cols-3 gap-8 md:gap-10">
             {[
               {
-                title: content.feat_t1 || "15+ Years Experience",
+                title: content.feat_t1 || "Evidence-based care",
                 icon: <Star size={36} />,
-                desc: content.feat_d1 || "Extensive clinical training and practice across Germany, UAE, and Nepal's premier institutions.",
+                desc: content.feat_d1 || "We combine 15+ years of global clinical expertise with genuine compassion, bringing world-class practices to your neighborhood.",
               },
               {
-                title: content.feat_t2 || "Modern Equipment",
+                title: content.feat_t2 || "Future-ready vision technology",
                 icon: <Microscope size={36} />,
-                desc: content.feat_d2 || "Computerized auto-refraction and digital diagnostics for pinpoint prescription accuracy.",
+                desc: content.feat_d2 || "Experience precise, objective assessments with our advanced digital diagnostics, ensuring your eyes receive the highest standard of modern care.",
               },
               {
-                title: content.feat_t3 || "Patient-First Care",
+                title: content.feat_t3 || "Comfort-focused",
                 icon: <ShieldCheck size={36} />,
-                desc: content.feat_d3 || "A warm, compassionate approach that prioritizes your comfort and long-term visual health.",
+                desc: content.feat_d3 || "Every step of your visit is designed to feel welcoming, gentle, and centered entirely around your peace of mind.",
               },
             ].map((feature, idx) => (
                <div key={idx} className="why-card text-center">
@@ -511,12 +521,12 @@ export default function HomeClient({ content }: { content: Record<string, string
       <section className="py-12 md:py-20">
         <div className="container mx-auto px-6 md:px-12 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-chocolate)] mb-6"><EditableText as="span" page="home" contentKey="cta_title" defaultText={content.cta_title || "Ready for Clearer Vision?"} /></h2>
-          <p className="text-[var(--color-chocolate-muted)] text-lg mb-8 md:mb-10 max-w-xl mx-auto"><EditableText as="span" page="home" contentKey="cta_desc" defaultText={content.cta_desc || "Book your comprehensive eye examination with our expert optometrist today."} /></p>
+          <p className="text-[var(--color-chocolate-muted)] text-lg mb-8 md:mb-10 max-w-xl mx-auto"><EditableText as="span" page="home" contentKey="cta_desc" defaultText={content.cta_desc || "Take the first step toward better sight and peace of mind with our expert optometrist today."} /></p>
           <Link
             href="/appointment"
             className="inline-flex w-full sm:w-auto items-center justify-center gap-2 px-10 py-5 rounded-full bg-[var(--color-primary)] text-white font-bold text-lg hover:shadow-[0_8px_30px_rgba(255,5,95,0.3)] transition-all hover:scale-[1.02]"
           >
-            Book Appointment <ArrowRight size={20} />
+            Book <ArrowRight size={20} />
           </Link>
         </div>
       </section>

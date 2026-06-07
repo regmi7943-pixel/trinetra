@@ -25,7 +25,7 @@ export default function ContactClient({ content }: { content: Record<string, str
   const contactInfo = [
     {
       icon: MapPin,
-      title: content.contact_t1 || "Visit Us",
+      title: content.contact_t1 || "Our Clinic",
       primary: content.contact_p1 || "Prithivichowk-8",
       secondary: content.contact_s1 || "Pokhara 33700, Kaski",
       color: "#FF055F",
@@ -33,25 +33,25 @@ export default function ContactClient({ content }: { content: Record<string, str
     },
     {
       icon: Phone,
-      title: content.contact_t2 || "Call Us",
-      primary: content.contact_p2 || "+977 9856064940",
+      title: content.contact_t2 || "Speak With Us",
+      primary: content.contact_p2 || content.settings_phone_call || "+977 9856064940",
       secondary: content.contact_s2 || "Opposite Nepal Bank",
       color: "#4CAF50",
       bg: "rgba(76,175,80,0.08)",
     },
     {
       icon: Mail,
-      title: content.contact_t3 || "Email Us",
-      primary: content.contact_p3 || "care@trinetraeyecare.com",
+      title: content.contact_t3 || "Write to Us",
+      primary: content.contact_p3 || content.settings_email || "care@trinetraeyecare.com",
       secondary: content.contact_s3 || "appointments@trinetraeyecare.com",
       color: "#D4A574",
       bg: "rgba(212,165,116,0.12)",
     },
     {
       icon: Clock,
-      title: content.contact_t4 || "Working Hours",
-      primary: content.contact_p4 || "Mon – Fri: 9:00 AM – 6:00 PM",
-      secondary: content.contact_s4 || "Saturday: 9:00 AM – 1:00 PM",
+      title: content.contact_t4 || "When We're Open",
+      primary: content.contact_p4 || content.settings_hours_week || "Mon – Fri: 9:00 AM – 6:00 PM",
+      secondary: content.contact_s4 || content.settings_hours_weekend || "Saturday: 9:00 AM – 1:00 PM",
       color: "#00E5E5",
       bg: "rgba(0,229,229,0.08)",
     },
@@ -140,14 +140,14 @@ export default function ContactClient({ content }: { content: Record<string, str
             <span
               className="text-sm font-medium text-[var(--color-chocolate,#2C1810)]"
             >
-              Get in Touch
+              We&apos;re Here for You
             </span>
           </div>
 
           <h1
             className="text-4xl md:text-5xl font-bold font-serif mb-4 text-[var(--color-chocolate,#2C1810)]"
           >
-            Contact Us
+            Let&apos;s schedule your visit.
           </h1>
           <p
             className="text-lg max-w-xl mx-auto"
@@ -156,8 +156,7 @@ export default function ContactClient({ content }: { content: Record<string, str
               opacity: 0.65,
             }}
           >
-            We&apos;re here to help with any questions about our services, your
-            appointment, or your eye health journey.
+            Take charge of your eye health. We listen first, then we act. We&apos;re here to help with any questions about our services, your appointment, or your vision journey.
           </p>
         </div>
       </section>
@@ -233,7 +232,7 @@ export default function ContactClient({ content }: { content: Record<string, str
                 <h3
                   className="font-bold text-lg font-serif mb-2 text-[var(--color-chocolate,#2C1810)]"
                 >
-                  Find Us Here
+                  Where to Find Us
                 </h3>
                 <p
                   className="text-sm mb-5 max-w-xs"
@@ -274,7 +273,7 @@ export default function ContactClient({ content }: { content: Record<string, str
               <h2
                 className="text-2xl font-bold font-serif mb-2 text-[var(--color-chocolate,#2C1810)]"
               >
-                Send a Message
+                Reach Out to Our Care Team
               </h2>
               <p
                 className="text-sm mb-7"
@@ -283,8 +282,7 @@ export default function ContactClient({ content }: { content: Record<string, str
                   opacity: 0.55,
                 }}
               >
-                Have a question or concern? Fill out the form and we&apos;ll get
-                back to you promptly.
+                Whenever you&apos;re ready, leave us a note. We&apos;ll get back to you with the answers you need.
               </p>
 
               {!formSubmitted ? (
@@ -327,7 +325,7 @@ export default function ContactClient({ content }: { content: Record<string, str
                     </label>
                     <input
                       type="tel"
-                      placeholder="+91 XXXXX XXXXX"
+                      placeholder="+977 XXXXX XXXXX"
                       className="w-full px-4 py-3 rounded-xl text-sm outline-none transition-all duration-200 focus:ring-2 focus:ring-[#FF055F]/20 focus:border-[#FF055F]"
                       
                     />
@@ -372,7 +370,7 @@ export default function ContactClient({ content }: { content: Record<string, str
                     }}
                   >
                     <Send size={16} />
-                    {isSubmitting ? "Sending..." : <EditableText as="span" page="contact" contentKey="form_btn" defaultText={content.form_btn || "Send Message"} />}
+                    {isSubmitting ? "Sending..." : <EditableText as="span" page="contact" contentKey="form_btn" defaultText={content.form_btn || "Send a Message"} />}
                   </button>
                 </form>
               ) : (
@@ -394,7 +392,7 @@ export default function ContactClient({ content }: { content: Record<string, str
                   <h3
                     className="font-bold text-xl font-serif mb-2 text-[var(--color-chocolate,#2C1810)]"
                   >
-                    Message Sent!
+                    Message Received
                   </h3>
                   <p
                     className="text-sm"
@@ -403,8 +401,7 @@ export default function ContactClient({ content }: { content: Record<string, str
                       opacity: 0.6,
                     }}
                   >
-                    Thank you for reaching out. We&apos;ll respond within 24
-                    hours.
+                    Thank you for reaching out to us. One of our care team members will respond to you soon.
                   </p>
                 </div>
               )}

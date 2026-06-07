@@ -23,12 +23,12 @@ interface ServiceData {
 const serviceData: Record<string, ServiceData> = {
   "eye-examination": {
     title: "Eye Examination",
-    subtitle: "Thorough vision and eye health assessment by our expert optometrists",
+    subtitle: "More than just reading letters on a wall. A gentle, comprehensive deep-dive into your long-term eye health.",
     heroImage: "https://images.unsplash.com/photo-1551884170-09fb70a3a2ed?w=800&q=80",
     content: [
-      "Our comprehensive eye examination goes far beyond a simple vision test. Using advanced diagnostic equipment, our experienced optometrists conduct a thorough assessment of your complete eye health — from the front surface of the eye to the delicate retinal structures at the back.",
-      "During the examination, we evaluate your visual acuity, check for refractive errors such as myopia, hyperopia, and astigmatism, and assess your eye coordination and focusing ability. We also perform critical health screenings including intraocular pressure measurement for glaucoma risk and detailed retinal examination.",
-      "Early detection is key to preventing vision loss. Many serious eye conditions, including glaucoma and diabetic retinopathy, develop silently without noticeable symptoms. Regular comprehensive eye exams are your best defense against these sight-threatening conditions.",
+      "We believe your vision deserves more than a hurried check. Our comprehensive eye examination goes far beyond a simple vision test. It’s a gentle, detailed exploration of your overall eye health—designed to give you complete peace of mind.",
+      "Using advanced, comfortable diagnostic technology, our experienced optometrist thoroughly assesses everything from your visual acuity to the delicate retinal structures at the back of your eye. We check for refractive errors, evaluate your eye coordination, and perform critical health screenings with the utmost care.",
+      "Because many eye conditions develop silently without obvious symptoms, proactive care is your best defense. We take the time to explain every step and finding, ensuring you understand your eye health and feel confident in our personalized guidance.",
     ],
     duration: "30–45 minutes",
     who: "Recommended for all ages, especially adults over 40 and anyone experiencing vision changes",
@@ -43,12 +43,12 @@ const serviceData: Record<string, ServiceData> = {
   },
   "computerized-eye-checkup": {
     title: "Computerized Eye Power Check-Up",
-    subtitle: "Precision digital refraction for accurate lens prescriptions",
+    subtitle: "Precision digital technology for accurate, comfortable lens prescriptions.",
     heroImage: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800&q=80",
     content: [
-      "Our computerized eye power check-up utilizes state-of-the-art autorefraction technology to measure the refractive power of your eyes with exceptional accuracy. This advanced digital assessment provides the foundation for precise prescription glasses and contact lenses.",
-      "The process is quick, comfortable, and non-invasive. Our autorefractor analyzes how light passes through your eye's optical system, measuring the exact degree of correction needed. This digital precision eliminates guesswork and provides reliable, repeatable results.",
-      "Combined with subjective refraction performed by our skilled optometrists, this dual approach ensures your final prescription is both technically accurate and personally comfortable for your unique visual needs.",
+      "Step into the future of vision care. Our computerized eye power check-up utilizes state-of-the-art autorefraction technology to provide an exact, digital map of your eye's unique refractive needs.",
+      "The process is remarkably quick, entirely comfortable, and completely non-invasive. Our digital system analyzes how light passes through your eye, instantly giving us a reliable baseline for your perfect prescription.",
+      "Combined with the careful, human touch of our skilled optometrist, this modern approach ensures your final prescription isn't just technically flawless—it's perfectly tailored for your absolute everyday comfort.",
     ],
     duration: "15–20 minutes",
     who: "Anyone needing an updated prescription or first-time glasses wearers",
@@ -63,12 +63,12 @@ const serviceData: Record<string, ServiceData> = {
   },
   "prescription-glasses": {
     title: "Prescription Glasses",
-    subtitle: "Designer frames and precision lenses tailored to your style and vision",
+    subtitle: "Frames that don't just fit your face, but fit your personality. Discover eyewear you’ll actually love living in.",
     heroImage: "https://images.unsplash.com/photo-1574258495973-f010dfbb5371?w=800&q=80",
     content: [
-      "Finding the perfect pair of glasses is about more than just clear vision — it's about expressing your personal style while enjoying optimal visual comfort. At Trinetra Eye Care, we offer a thoughtfully curated collection of frames from trusted brands, ensuring quality and style for every taste and budget.",
-      "Our lens options are equally impressive. From single-vision and progressive lenses to specialized coatings like anti-glare, blue light filtering, and photochromic technology, we customize every pair to match your lifestyle. Whether you spend hours at a screen or enjoy outdoor activities, we have the right lens solution.",
-      "Our expert team guides you through the selection process, helping you find frames that complement your face shape, fit comfortably, and meet your daily visual demands. Every pair is carefully crafted and fitted to ensure lasting comfort and crystal-clear vision.",
+      "Finding the perfect pair of glasses shouldn't be a chore—it should be a joy. At Trinetra Eye Care, we thoughtfully curate our collection to help you discover frames that don't just fit your face perfectly, but beautifully express your unique personality.",
+      "Your lifestyle dictates your lens needs, and we listen closely. Whether you're seeking relief from digital screens with advanced blue light filtering, or need seamless progressive lenses for all-day comfort, we tailor every detail so you can see the world clearly.",
+      "Our friendly team is here to guide you, offering honest advice and expert fittings. We carefully craft each pair to ensure they feel like a natural extension of yourself, delivering lasting comfort and crystal-clear vision every single day.",
     ],
     duration: "Frame selection: 20–30 min | Lens crafting: 2–5 days",
     who: "Anyone with a corrective lens prescription seeking quality eyewear",
@@ -83,12 +83,12 @@ const serviceData: Record<string, ServiceData> = {
   },
   "eye-condition-consultation": {
     title: "Eye Condition Consultation",
-    subtitle: "Expert evaluation and treatment plans for various eye conditions",
+    subtitle: "Tired of the end-of-day ache? Stop surviving screen time and start seeing comfortably again.",
     heroImage: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=800&q=80",
     content: [
-      "Our eye condition consultation service provides specialized evaluation and management for a wide range of ocular concerns. Whether you're dealing with persistent dry eyes, seasonal allergies affecting your eyes, or more complex conditions, our experienced team is here to help.",
-      "During your consultation, we take a detailed history of your symptoms, perform targeted diagnostic tests, and develop a personalized treatment plan. We believe in educating our patients about their conditions, empowering you to make informed decisions about your eye health.",
-      "For conditions requiring ongoing management, we provide structured follow-up care and monitoring. Our goal is not just to treat symptoms, but to address root causes and prevent recurrence, ensuring long-term eye health and comfort.",
+      "You don't have to live with tired, gritty, or uncomfortable eyes. Whether you're battling persistent dry eye, digital screen strain, or seasonal allergies, our compassionate team is dedicated to finding the real root of your discomfort.",
+      "During your consultation, we take the time to truly listen to your experience. We perform gentle, targeted diagnostics to understand exactly what your eyes need, then collaborate with you to create a personalized, easily manageable treatment plan.",
+      "We aren't just here to offer a quick fix. We provide ongoing support, clear education, and structured follow-up care to ensure you stop merely surviving your day and get back to seeing, working, and living comfortably.",
     ],
     duration: "30–60 minutes (depending on complexity)",
     who: "Patients experiencing eye discomfort, vision changes, or diagnosed eye conditions",

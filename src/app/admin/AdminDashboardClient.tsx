@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { Edit3, Layers, Glasses, ArrowRight, Activity, BarChart3 } from "lucide-react";
+import { Edit3, Layers, Glasses, ArrowRight, Activity, BarChart3, Settings } from "lucide-react";
 
 interface AdminDashboardClientProps {
   totalServices: number;
@@ -33,6 +33,14 @@ export default function AdminDashboardClient({ totalServices, totalEyewear }: Ad
       icon: Glasses,
       color: "text-[#FF055F]",
       bg: "bg-[#FF055F]/10",
+    },
+    {
+      title: "Global Settings",
+      description: "Manage global website settings (Phone, Email, Socials)",
+      href: "/admin/settings",
+      icon: Settings,
+      color: "text-[#D4A574]",
+      bg: "bg-[#D4A574]/10",
     },
   ];
 

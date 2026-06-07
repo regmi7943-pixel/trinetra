@@ -9,5 +9,7 @@ export const metadata: Metadata = {
 
 export default async function ContactPage() {
   const content = await getContent("contact");
-  return <ContactClient content={content} />;
+  const global = await getContent("global");
+  const combinedContent = { ...global, ...content };
+  return <ContactClient content={combinedContent} />;
 }
