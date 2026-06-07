@@ -1,9 +1,8 @@
 "use client";
 
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { Eye, MapPin, Phone, Mail, Clock, Link2, Globe } from "lucide-react";
-import { motion } from "motion/react";
 
 const footerLinks = [
   { name: "Home", path: "/" },
@@ -28,6 +27,17 @@ const socialLinks = [
 ];
 
 export const Footer = () => {
+  const [isEditMode, setIsEditMode] = useState(false);
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const isEdit = new URLSearchParams(window.location.search).get("editMode") === "true";
+      setIsEditMode(isEdit);
+    }
+  }, []);
+
+  if (isEditMode) return null;
+
   return (
     <footer className="bg-[var(--color-cream-dark)] border-t border-[var(--color-warm-border)] pt-16 pb-8">
       <div className="container mx-auto px-4 md:px-6">
@@ -117,21 +127,23 @@ export const Footer = () => {
                 <div className="p-1.5 rounded-lg bg-[var(--color-primary)]/10 mt-0.5 shrink-0">
                   <MapPin size={16} className="text-[var(--color-primary)]" />
                 </div>
-                <span className="text-[var(--color-chocolate-muted)] text-sm leading-relaxed">
-                  Prithivichowk-8, Nayabazar Road, Pokhara (opposite Nepal Bank)
-                </span>
+                <p className="text-[var(--color-chocolate-muted)] text-sm leading-relaxed group-hover:text-[var(--color-chocolate)] transition-colors">
+                  Prithivichowk-8, Pokhara 33700<br />(opposite Nepal Bank)
+                </p>
               </li>
-              <li className="flex items-center gap-3">
+
+              <li className="flex items-start gap-3">
                 <div className="p-1.5 rounded-lg bg-[var(--color-warm-accent)]/10 shrink-0">
                   <Phone size={16} className="text-[var(--color-warm-accent)]" />
                 </div>
                 <a
-                  href="tel:+9771234567890"
-                  className="text-[var(--color-chocolate-muted)] text-sm hover:text-[var(--color-chocolate)] transition-colors duration-300"
+                  href="tel:+9779856064940"
+                  className="text-[var(--color-chocolate-muted)] text-sm font-medium hover:text-[var(--color-chocolate)] transition-colors"
                 >
-                  +977 1234567890
+                  +977 9856064940
                 </a>
               </li>
+
               <li className="flex items-center gap-3">
                 <div className="p-1.5 rounded-lg bg-[var(--color-chocolate-muted)]/10 shrink-0">
                   <Mail size={16} className="text-[var(--color-chocolate-muted)]" />

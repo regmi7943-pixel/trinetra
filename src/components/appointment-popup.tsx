@@ -2,7 +2,6 @@
 
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
-import { AnimatePresence, motion } from "motion/react";
 import { X, Calendar, User, Phone, Mail, MessageSquare, Send } from "lucide-react";
 
 const services = [
@@ -64,21 +63,14 @@ export function AppointmentPopup() {
   };
 
   return (
-    <AnimatePresence>
+    <>
       {open && (
         <>
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
+          <div
             className="fixed inset-0 z-[90] bg-black/45 backdrop-blur-[2px]"
             onClick={close}
           />
-          <motion.div
-            initial={{ opacity: 0, y: 24, scale: 0.96 }}
-            animate={{ opacity: 1, y: 0, scale: 1 }}
-            exit={{ opacity: 0, y: 20, scale: 0.96 }}
-            transition={{ duration: 0.25, ease: "easeOut" }}
+          <div
             className="scrollbar-popup fixed inset-x-4 top-1/2 z-[100] max-h-[88vh] -translate-y-1/2 overflow-y-auto rounded-3xl border border-[var(--color-warm-border,#E8DDD1)] bg-white p-6 shadow-[0_20px_60px_rgba(44,24,16,0.2)] md:inset-x-0 md:left-1/2 md:w-[min(92vw,640px)] md:-translate-x-1/2 md:p-8"
           >
             <button
@@ -224,10 +216,10 @@ export function AppointmentPopup() {
                 </button>
               </div>
             )}
-          </motion.div>
+          </div>
         </>
       )}
-    </AnimatePresence>
+    </>
   );
 }
 
